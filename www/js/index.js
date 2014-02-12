@@ -68,7 +68,7 @@ var app = {
         function getBlogs() {
             var dfd = $.Deferred();
             $.ajax({
-                url: 'http://alexbachuk.com/api/get_recent_posts/',
+                url: 'http://www.jphamada.com.ar/api/get_recent_posts/',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data){
