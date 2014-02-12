@@ -6,38 +6,57 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/jqm.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Agenda 351</title>
+        <title>Música</title>
     </head>
     <body>
-        <div id="home-page" data-role="page">
-    <div id="home-header" data-role="header">
-        <h1><i class="icon-home"></i>Inicio</h1>
+    <div id="blog-page" data-role="page">
+    <div data-role="header">
+        <h1><i class="icon-home"></i>Música</h1>
     </div><!-- /#header -->
     
-    <div id="home-content" data-role="content">
+    <div id="blog-content" data-role="content">
         
-        <div class="text-center">
-            <img src="img/logo-agenda-351.png">
-            <h2>Toda la información cultural en un solo lugar.</h2>
-        </div>
+        
+        <div id="blog-data"></div>
+
+
+        <script id="blog-template" type="text/x-handlebars-template">
+            <ul data-role="listview" data-inset="true" id="all-posts">
+            
+            {{#each posts}}
+                
+                <li><a data-transition="slide" href="single.html?{{@index}}">{{title}}</a></li>
+
+            {{/each}}
+            </ul>
+        </script>
+
 
         <a data-role="button" data-transition="slide" href="musica.html">Música</a>
         <a data-role="button" data-transition="slide" href="teatro.html">Teatro</a>
         <a data-role="button" data-transition="slide" href="cine.html">Cine</a>
         <a data-role="button" data-transition="slide" href="plastica.html">Plástica</a>
-
     </div><!-- /#home-page -->
     
-    <div id="footer" data-role="footer" style="position:fixed; bottom: 0px; width: 100%">
+    <div id="footer" data-role="footer">
         <h1><i class="icon-coffee"></i>// 2014 // Redacción 351 //</h1>
     </div><!-- /#footer -->
+
+
+
+
+    
+
+
+
         <script type="text/javascript" src="cordova-2.7.0.js"></script>
         <script type="text/javascript" src="js/libs/jquery.js"></script>
         <script type="text/javascript" src="js/libs/jqm.js"></script>
         <script type="text/javascript" src="js/libs/handlebars.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            
+            app.musica();
         </script>
     </body>
 </html>
