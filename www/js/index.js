@@ -107,7 +107,7 @@ var app = {
 
     portfolio: function(){
         $.ajax({
-            url: 'http://alexbachuk.com/?json=get_recent_posts&post_type=portfolio',
+            url: 'http://www.jphamada.com.ar/api/get_recent_posts/',
             type: 'GET',
             dataType: 'json',
             success: function(data){
