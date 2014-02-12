@@ -68,7 +68,7 @@ var app = {
         function getBlogs() {
             var dfd = $.Deferred();
             $.ajax({
-                url: 'http://www.jphamada.com.ar/api/get_recent_posts/',
+                url: 'http://agenda351.com.ar/m/api/get_category_posts/?slug=musica',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data){
@@ -97,7 +97,7 @@ var app = {
         function getBlogs() {
             var dfd = $.Deferred();
             $.ajax({
-                url: 'http://www.jphamada.com.ar/api/get_recent_posts/',
+                url: 'http://agenda351.com.ar/m/api/get_category_posts/?slug=teatro',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data){
