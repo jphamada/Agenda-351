@@ -64,40 +64,11 @@ var app = {
     },
 
 
-    musica: function(){
+    blog: function(){
         function getBlogs() {
             var dfd = $.Deferred();
             $.ajax({
                 url: 'http://agenda351.com.ar/m/api/get_category_posts/?slug=musica',
-                type: 'GET',
-                dataType: 'json',
-                success: function(data){
-                    var source   = $("#blog-template").html();
-                    var template = Handlebars.compile(source);
-                    var blogData = template(data);
-                    $('#blog-data').html(blogData);
-                    $('#blog-data').trigger('create');
-                    dfd.resolve(data);
-
-                },
-                error: function(data){
-                    console.log(data);
-                }
-            });
-            return dfd.promise();
-        };
-
-        getBlogs().then(function(data){
-            $('#all-posts').on('click','li', function(e){                
-                localStorage.setItem('postData', JSON.stringify(data.posts[$(this).index()]));
-            });
-        });
-
-    teatro: function(){
-        function getBlogs() {
-            var dfd = $.Deferred();
-            $.ajax({
-                url: 'http://agenda351.com.ar/m/api/get_category_posts/?slug=teatro',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data){
